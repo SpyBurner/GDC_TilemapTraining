@@ -25,13 +25,13 @@ public class PlatformerMovement : MonoBehaviour
 
     void Walk(Vector2 direction)
     {
-        print("Walking");
+        // print("Walking");
         rb.AddForce(new Vector2(direction.x * core.speed * Time.deltaTime, 0));
     }
 
     void Jump(Vector2 direction)
     {
-        print("Jumping");
+        // print("Jumping");
         if (core.isGrounded && direction.y > 0 && Time.time - core.lastJumpTime > core.jumpCooldown)
         {
             rb.AddForce(Vector2.up * core.jumpForce, ForceMode2D.Impulse);
